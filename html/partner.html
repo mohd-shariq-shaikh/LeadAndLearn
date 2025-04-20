@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Partners - Lead and Learn Foundation</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/components/clients/client-2/assets/css/client-2.css">
+    <!-- Fav Icon -->
+    <link rel="shortcut icon" href="/img/favicon_io/android-chrome-192x192.png" type="image/x-icon">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        /* Nav */
+
+        nav div div {
+            background-color: #F5F5F5;
+        }
+
+        .navbar {
+            padding: 4px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .logo-container {
+            width: 30%;
+        }
+
+        .logo {
+            padding: 0;
+            margin: 0;
+            width: 8vw;
+            height: auto;
+            mix-blend-mode: darken;
+            /* Maintain aspect ratio */
+        }
+
+
+
+        .logo-text {
+            color: #bf2025;
+            /* letter-spacing: ; */
+            font-family: "Montserrat", sans-serif;
+            font-weight: 900;
+            font-size: .6rem;
+            margin-left: .3em;
+            margin-bottom: 0;
+            letter-spacing: .089em;
+            /* -webkit-text-stroke: 0.5px #bf2025; */
+        }
+
+        .logo {
+            width: 60px;
+            /* Default size 
+    height: auto;*/
+        }
+
+        a:hover {
+            color: #ffffff;
+        }
+
+        .nav-link-color:hover {
+            color: #ffffff;
+        }
+
+        .nav-link-color {
+            color: #fff;
+            background-color: #008080;
+        }
+
+        .custom-btn {
+            background-color: #FFA500;
+            color: #fff;
+            padding: 7.5px 12px;
+        }
+
+        .custom-btn:hover {
+            background-color: #ff8c00;
+            color: #ECF0F1;
+        }
+
+
+        .navbar-collapse {
+            justify-content: flex-end;
+            align-content: flex-end;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        .nav-link {
+            color: #000;
+            text-decoration: none;
+            transition: color 0.3s ease, text-decoration 0.3s ease;
+        }
+
+        .stories-active {
+            color: #ffffff !important;
+            text-decoration: underline;
+            /* Underline for the active link */
+            text-underline-offset: 6px;
+            /* Adjust offset for better visibility */
+            font-weight: bold;
+            /* Optional: Make it bold for emphasis */
+        }
+
+        .dropdown-item:active {
+            background-color: #FFA500 !important;
+        }
+
+        @media (max-width: 991px) {
+            .nav-link-color {
+                color: #000000A6;
+                background-color: transparent;
+            }
+
+            .nav-link-color:hover {
+                color: rgba(0, 0, 0, 0.8);
+            }
+
+            .stories-active {
+                color: #000000A6 !important;
+                text-decoration: underline;
+                /* Underline for the active link */
+                text-underline-offset: 6px;
+                /* Adjust offset for better visibility */
+                font-weight: bold;
+                /* Optional: Make it bold for emphasis */
+            }
+
+            .dropdown:hover .dropdown-menu {
+                display: block;
+            }
+
+        }
+
+        @media (max-width: 768px) {
+            .logo {
+                width: 60px;
+                /* Smaller screens */
+            }
+        }
+
+        @media (max-width: 594px) {
+            .logo {
+                width: 60px;
+                /* Smaller screens */
+            }
+
+            .logo-container {
+                width: 63%;
+            }
+        }
+
+        @media (min-width: 200px) and (max-width: 584px) {
+            .logo {
+                width: 60px;
+
+                /* Even smaller screens */
+                .logo-container {
+                    width: 51%;
+                }
+            }
+        }
+
+        /* Nav Close */
+
+        .container {
+            margin-top: 40px;
+        }
+
+        .card {
+            border: none;
+        }
+
+        .partners-header {
+            background-color: #008080;
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .form-section {
+            background-color: #F5F5F5;
+            padding: 50px 20px;
+            border-radius: 8px;
+        }
+
+        .btn-teal {
+            background-color: #008080;
+            color: white;
+        }
+
+        .btn-teal:hover {
+            background-color: #006666;
+        }
+
+        /* Our Partners */
+
+        .our-partner{
+            margin-bottom: 100px;
+        }
+
+        .square-holder {
+            width: 100%;
+            /* Automatically adjusts width */
+            max-width: 300px;
+            /* Keeps the size consistent across screens */
+            padding: 20px;
+            border: 1px solid #cecece;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            background-color: #f1f1f1;
+            min-height: 150px;
+            /* Responsive adjustments */
+            transition: transform 0.3s ease;
+        }
+
+        .square-holder img {
+            max-width: 100%;
+            height: auto;
+            filter: grayscale(100%);
+            transition: all 0.3s ease;
+        }
+
+        .square-holder:hover {
+            transform: scale(1.05);
+            /* Subtle hover effect */
+        }
+
+        .square-holder:hover img {
+            filter: none;
+            /* Remove grayscale on hover */
+        }
+
+        /* Responsive Design */
+
+
+        @media (max-width: 576px) {
+
+            /* Mobile devices */
+            .our-partner {
+                height: 500px;
+            }
+
+            .our-partner h2 {
+                text-align: center;
+            }
+
+            .square-holder {
+                min-height: 100px;
+                /* Further reduce height */
+            }
+        }
+
+        @media (min-width: 580px) {
+
+            /* Tablets */
+            .our-partner {
+                height: 185px;
+            }
+
+            .square-holder {
+                min-height: 120px;
+                /* Reduce height for smaller screens */
+                margin-bottom: 15px;
+            }
+        }
+
+        /* Our Partners Close */
+        /* Footer CSS */
+
+        .footer {
+            background-color: #333;
+            color: #f5f5f5;
+            padding: 30px 0;
+        }
+
+        .footer h5 {
+            color: #ffc107;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .footer a {
+            color: #f5f5f5;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: #ffc107;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            color: #f5f5f5;
+            font-size: 18px;
+        }
+
+        .social-icons a:hover {
+            color: #ffc107;
+        }
+
+        .contact-form input {
+            border-radius: 0;
+            border: 1px solid #ccc;
+        }
+
+        .btn-subscribe {
+            background-color: #ffc107;
+            border: none;
+            color: #333;
+        }
+
+        .btn-subscribe:hover {
+            background-color: #e6ac00;
+        }
+
+        .footer-bottom {
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            color: #aaa;
+        }
+
+        .footer {
+            background-color: #333;
+            color: #f5f5f5;
+            padding: 30px 0;
+        }
+
+        .footer h5 {
+            color: #ffc107;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .footer a {
+            color: #f5f5f5;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: #ffc107;
+        }
+
+        .footer-bottom {
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            color: #aaa;
+        }
+
+        /* Center content on mobile */
+        @media (max-width: 767.98px) {
+            .footer .text-md-left {
+                text-align: center;
+            }
+        }
+
+        /* Footer Close */
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light Mynav">
+        <div class="container-fluid">
+            <div class="logo-container d-flex align-items-center">
+                <img class="navbar-brand logo" src="/img/LEAD AND LEARN  - Copy.png" alt="logo" />
+                <!-- <b class="logo-text">LEAD AND LEARN FOUNDATION</b> -->
+                <div>
+                    <h1 class="logo-text">LEAD AND LEARN <span class="d-flex justify-content-center">FOUNDATION</span>
+                    </h1>
+                </div>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse nav-component" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-color"
+                            style="border-top-left-radius: 5px; border-bottom-left-radius: 5px;" aria-current="page"
+                            href="/html/index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle nav-link-color" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            About Us
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="/html/LeadershipBehindLLF.html">Leadership Behind LLF</a>
+                            </li>
+                            <li><a class="dropdown-item" href="/html/testimonials.html">Testimonials</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle nav-link-color" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item fw-bold" href="#">Skill Training</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="/html/pre-school-and-schools.html">Pre-School And
+                                    Schools</a>
+                            </li>
+                            <li><a class="dropdown-item" href="/html/adult-scales.html">College Programs</a></li>
+                            <li><a class="dropdown-item" href="/html/adult.html">Community Programs</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle nav-link-color stories-active" href="#" id="navbarDropdown"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Impact
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="/html/impact.html">Success Stories</a></li>
+                            <li><a class="dropdown-item" href="/html/partner.html">Partners</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-color" aria-current="page" href="/html/volunteer.html">Get
+                            Involved</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-color" aria-current="page" href="/html/contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-color"
+                            style="border-top-right-radius: 5px; border-bottom-right-radius: 5px;" aria-current="page"
+                            href="/html/gallery.html">Gallery</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Client 2 - Bootstrap Brain Component -->
+    <section>
+        <div class="container">
+            <div class="row justify-content-md-center">
+                <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
+                    <h1 class="fs-6 text-secondary mb-2 text-uppercase text-center">Our Partners</h1>
+                    <h6 class="mb-4 display-5 text-center">Trusted by over 999+ clients</h6>
+                    <p class="fs-5 text-secondary mb-5 text-center">Our partners play a vital role in helping Lead and
+                        Learn empower communities and equip students with essential life skills. Together, we are
+                        dedicated to creating meaningful change and fostering a brighter future for young minds.Our
+                        clients are our top priority, and we are
+                        committed to providing them with the highest level of service.</p>
+                    <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Our Partners -->
+
+    <section class="our-partner section section-default mt-none mb-none M-V my-box" style="width: 100%;">
+        <div>
+            <h2 class="mb-sm text-center">Our <strong>Partners</strong></h2>
+            <br>
+            <div class="row">
+                <div class="col-12 col-md-4 d-flex justify-content-center align-items-center mb-3">
+                    <div class="square-holder">
+                        <a href="https://www.yuvaparivartan.org/" target="_blank">
+                            <img style="object-fit: contain;" alt="Our Partner: Yuva Parivartan's Logo"
+                                src="/img/partners/Yuva-Parivartan-25th-Year-Logo.jpg" />
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 d-flex justify-content-center align-items-center mb-3">
+                    <div class="square-holder">
+                        <a href="https://www.zaubacorp.com/company/ANUKALP-MARITIME-FOUNDATION/U80100MH2018NPL311716"
+                            target="_blank">
+                            <img style="object-fit: contain;" src="/img/partners/Anukalp.png"
+                                alt="Our Partner: Anukalp Foundation's Logo">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 d-flex justify-content-center align-items-center mb-3">
+                    <div class="square-holder">
+                        <a href="https://gttfoundation.org/" target="_blank">
+                            <img style="object-fit: contain;" alt="Our Partner: GTT Foundation's Logo"
+                                src="/img/partners/GTT-logo.png" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Partners Close -->
+
+    <!-- Additional rows can be added here for more partners -->
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
+    <!-- Partner Inquiry Form Section -->
+
+    <div class="container my-5 form-section">
+        <h2 class="text-center mb-4" id="join-as-partner">Become a Partner</h2>
+        <p class="text-center">Interested in collaborating with Lead and Learn? Fill out the form below, and we’ll
+            get back to you shortly.</p>
+        <form>
+            <div class="mb-3">
+                <label for="organizationName" class="form-label">Organization Name</label>
+                <input type="text" class="form-control" id="organizationName" required>
+            </div>
+            <div class="mb-3">
+                <label for="contactName" class="form-label">Contact Name</label>
+                <input type="text" class="form-control" id="contactName" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="phone" class="form-label">Phone Number</label>
+                <input type="tel" class="form-control" id="phone" required>
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" rows="4"
+                    placeholder="Tell us how you'd like to partner with us"></textarea>
+            </div>
+            <div>
+                <button type="submit" class="btn btn-teal">Submit</button>&emsp;
+                <button type="reset" class="btn btn-teal">Reset</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Footer Start -->
+
+    <footer class="footer M-V">
+        <div class="container">
+            <div class="row text-md-left">
+                <!-- Contact Information -->
+                <div class="col-md-3 col-12 mb-4">
+                    <h5>Headquarters</h5>
+                    <p>Panvel Branch<br>Lead and Learn Foundation,<br>Shop 8,9,10,11, 1st floor, Omkar Arcade, Opp.
+                        Panvel Railway station, Navi Mumbai 410206</p>
+                    <p><strong>Phone:</strong> +91 8657076759 / 9819549857</p>
+                    <p><strong>Email:</strong> leadandlearnfoundation@gmail.com</p>
+                </div>
+                <!-- About Section -->
+                <div class="col-md-3 col-12 mb-4 gap-3">
+                    <h5>About Us</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="/html/LeadershipBehindLLF.html">Leadership behind LLF</a></li>
+                        <li><a href="/html/testimonials.html">Testimonials</a></li>
+                    </ul>
+                    <br>
+                    <h5>Our Programmes</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="/html/pre-school-and-schools.html">Pre-School and Schools</a></li>
+                        <li><a href="/html/adult-scales.html">College Programs</a></li>
+                        <li><a href="/html/adult.html">Community Programs</a></li>
+                    </ul>
+                </div>
+                <!-- Services Section -->
+                <div class="col-md-3 col-12 mb-4">
+                    <h5>Our Impact</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="/html/impact.html">Success Stories</a></li>
+                        <li><a href="/html/partner.html">Partners</a></li>
+                        <li><a href="/html/contact.html">Contact</a></li>
+
+                    </ul>
+                </div>
+                <!-- Impact and Join Us -->
+                <div class="col-md-3 col-12 mb-4">
+                    <h5>Join the Change</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="/html/volunteer.html">Volunteer with Us</a></li>
+                        <li><a href="/html/gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom text-center mt-3">
+            <p>&copy; 2024 Lead and Learn Foundation. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+    <!-- Footer Close -->
+</body>
+
+</html>
+
+</body>
+
+</html>

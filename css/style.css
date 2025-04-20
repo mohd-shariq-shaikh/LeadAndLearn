@@ -1,0 +1,1266 @@
+/* Teal & Orange
+Primary Colors: Teal (#008080), Bright Orange (#FFA500)
+Accent Colors: Light Gray (#F5F5F5), Charcoal (#333333)
+Vibe: Modern, Energetic, Friendly */
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'); */
+
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif;
+}
+
+p {
+    font-weight: 600;
+}
+
+.nav-container {
+    margin-bottom: 0;
+}
+
+nav div div {
+    background-color: #F5F5F5;
+}
+
+.navbar {
+    padding: 4px;
+    position: relative;
+    z-index: 10;
+}
+
+.logo-container {
+    width: 30%;
+}
+
+.logo {
+    padding: 0;
+    margin: 0;
+    width: 8vw;
+    height: auto;
+    mix-blend-mode: darken;
+    /* Maintain aspect ratio */
+}
+
+
+
+.logo-text {
+    color: #bf2025;
+    /* letter-spacing: ; */
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
+    font-size: .6rem;
+    margin-left: .3em;
+    margin-bottom: 0;
+    letter-spacing: .089em;
+    /* -webkit-text-stroke: 0.5px #bf2025; */
+}
+
+.logo {
+    width: 60px;
+    /* Default size 
+    height: auto;*/
+}
+
+a:hover {
+    color: #ffffff;
+}
+
+.nav-link-color:hover {
+    color: #ffffff;
+}
+
+.nav-link-color {
+    color: #fff;
+    background-color: #008080;
+}
+
+.custom-btn {
+    background-color: #FFA500;
+    color: #fff;
+    padding: 7.5px 12px;
+}
+
+.custom-btn:hover {
+    background-color: #ff8c00;
+    color: #ECF0F1;
+}
+
+
+.navbar-collapse {
+    justify-content: flex-end;
+    align-content: flex-end;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.nav-link {
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.nav-link.active {
+    color: #ffffff !important;
+    text-decoration: underline;
+    /* Underline for the active link */
+    text-underline-offset: 6px;
+    /* Adjust offset for better visibility */
+    font-weight: bold;
+    /* Optional: Make it bold for emphasis */
+}
+
+.dropdown-item:active {
+    background-color: #FFA500 !important;
+}
+
+@media (max-width: 991px) {
+    .nav-link-color {
+        color: #000000A6;
+        background-color: transparent;
+    }
+
+    .nav-link-color:hover {
+        color: rgba(0, 0, 0, 0.8);
+    }
+
+    .nav-link.active {
+        color: #000000A6 !important;
+        text-decoration: underline;
+        /* Underline for the active link */
+        text-underline-offset: 6px;
+        /* Adjust offset for better visibility */
+        font-weight: bold;
+        /* Optional: Make it bold for emphasis */
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+    /* .nav-link:active{
+    font-weight: normal;
+} */
+}
+
+@media (max-width: 768px) {
+    .logo {
+        width: 60px;
+        /* Smaller screens */
+    }
+}
+
+@media (max-width: 594px) {
+    .logo {
+        width: 60px;
+        /* Smaller screens */
+    }
+
+    .logo-container {
+        width: 63%;
+    }
+}
+
+@media (min-width: 200px) and (max-width: 584px) {
+    .logo {
+        width: 60px;
+
+        /* Even smaller screens */
+        .logo-container {
+            width: 51%;
+        }
+    }
+}
+
+/* Social Media Icons CSS */
+#icon_wrapper {
+    position: fixed;
+    top: 242px;
+    right: 0px;
+    z-index: 99999;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+section {
+    height: 90vh;
+    position: relative;
+}
+
+.quote {
+
+    max-width: 700px;
+    width: 80%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0; */
+    margin: auto;
+}
+
+.quote h1 {
+    color: white;
+}
+
+.quote p {
+    color: white;
+    opacity: 0.9;
+}
+
+.quote p span button {
+    opacity: 0.9;
+}
+
+
+.vision {
+    display: grid;
+    grid-template-columns: 2;
+    grid-template-rows: 1;
+}
+
+
+
+
+/* Hero */
+/**
+ * See: http://www.css-101.org/articles/ken-burns_effect/css-transition.php
+ */
+
+/**
+ * Styling the container (the wrapper)
+ * 
+ * position is used to make this box a containing block (it becomes a reference for its absolutely positioned children). overflow will hide part of the images moving outside of the box.
+ */
+
+#slideshow {
+    position: relative;
+    width: 100%;
+    max-height: 100vh;
+    /* add max height if needed */
+    overflow: hidden;
+    /* border:1px solid #FFA500; */
+}
+
+#slideshow:after {
+    padding-top: 56.25%;
+    /* ratio of photo ex: 16:9 => 9/16 = .5625 */
+    display: block;
+    content: '';
+}
+
+/**
+ * Styling the images
+ *
+ * position:absolute is to put all images in a stack. Dimensions are set to increase the size of these images so their edges do not appear in the parent box when we move them inside the said box.
+ * Because the images are now larger than their parent container, we use top, left and margin values to align them in the center of the box.
+ * Finally, we set the transition (property and duration). Note that duration values are different for opacity and transform as we want the "fade-in" effect to be faster than the "panning" effect.
+ */
+
+#slideshow img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -50%;
+    margin-top: -25%;
+    opacity: 0;
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    /* object-fit: cover; */
+    -webkit-transition-property: opacity, -webkit-transform;
+    -webkit-transition-duration: 3s, 10s;
+    -moz-transition-property: opacity, -moz-transform;
+    -moz-transition-duration: 3s, 10s;
+    -ms-transition-property: opacity, -ms-transform;
+    -ms-transition-duration: 3s, 10s;
+    -o-transition-property: opacity, -o-transform;
+    -o-transition-duration: 3s, 10s;
+    transition-property: opacity, transform;
+    transition-duration: 3s, 10s;
+}
+
+/**
+ * We change the point of origin using four corners so images do not move in the same direction. 
+ * This technique allows us to create various paths while applying the same translate() values to all images (see the 'fx' class further below).
+ */
+
+#slideshow img {
+    -webkit-transform-origin: bottom left;
+    -moz-transform-origin: bottom left;
+    -ms-transform-origin: bottom left;
+    -o-transform-origin: bottom left;
+    transform-origin: bottom left;
+}
+
+#slideshow :nth-child(2n+1) {
+    -webkit-transform-origin: top right;
+    -moz-transform-origin: top right;
+    -ms-transform-origin: top right;
+    -o-transform-origin: top right;
+    transform-origin: top right;
+}
+
+#slideshow :nth-child(3n+1) {
+    -webkit-transform-origin: top left;
+    -moz-transform-origin: top left;
+    -ms-transform-origin: top left;
+    -o-transform-origin: top left;
+    transform-origin: top left;
+}
+
+#slideshow :nth-child(4n+1) {
+    -webkit-transform-origin: bottom right;
+    -moz-transform-origin: bottom right;
+    -ms-transform-origin: bottom right;
+    -o-transform-origin: bottom right;
+    transform-origin: bottom right;
+}
+
+/**
+ * Because of the stacking context, we need to make sure that the first image (in source) is not hidden by the last one. 
+ * The rule below moves all images past the second one down the stack. 
+ * This is because the second image needs to show on top of the first one when it transitions in.
+ */
+
+#slideshow .fx:first-child+img~img {
+    z-index: -1;
+}
+
+/**
+ * Because images are styled with a different point of origin, the following rule will create different panning effects.
+ */
+
+#slideshow .fx {
+    opacity: 1;
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+#slideshow img {
+    aspect-ratio: 3/2;
+}
+
+@media (max-width: 768px) {
+    #slideshow {
+        height: 100vh;
+    }
+
+    #slideshow img {
+        width: 100%;
+        /* Ensure images fill the width of the screen */
+        height: 100vh;
+        /* Let the height adjust according to aspect ratio */
+        /* aspect-ratio: 3/2; */
+        top: 0;
+        left: 50%;
+        margin-left: -50%;
+        margin-top: -25%;
+        object-fit: cover;
+    }
+
+    #slideshow:after {
+        content: '';
+        display: block;
+        padding-top: 56.25%;
+        /* 16:9 aspect ratio, adjust as needed */
+        /* Adjust the height so that the images are pushed up correctly */
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+/* General Reset Hero */
+
+/* Container to Position Text as Overlay on Slideshow */
+/* Base Styles for Overlay */
+.hero-section {
+    font-family: 'Roboto', Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 0 20px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* Heading Styles */
+.hero-content h1 {
+    font-size: 3.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #FFFFFF;
+}
+
+.hero-content h1 span {
+    color: #FFA500;
+}
+
+/* Paragraph Styles */
+.hero-content p {
+    font-size: 1.8em;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+/* CTA Buttons */
+.cta-button,
+.cta-button1 {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1em;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button {
+    background-color: #FFA500;
+}
+
+.cta-button1 {
+    background-color: #008080;
+}
+
+.cta-button:hover,
+.cta-button1:hover {
+    background-color: #006565;
+    color: #ECF0F1;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (min-width: 768px) and (max-width: 970px) {
+    .hero-section {
+        height: auto;
+        padding: 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 2em;
+    }
+
+    .hero-content p {
+        font-size: 1em;
+    }
+
+    .cta-button,
+    .cta-button1 {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 767px) {
+    .hero-content h1 {
+        font-size: 2em;
+        margin: 0;
+        margin-bottom: 3px;
+    }
+
+    .hero-content p {
+        font-size: 1em;
+        margin: 0;
+        margin-top: 0;
+    }
+
+    .cta-button,
+    .cta-button1 {
+        padding: 8px 16px;
+        font-size: 1em;
+    }
+}
+
+#hero img {
+    max-width: inherit;
+}
+
+/* What we do */
+.my-box {
+    --mask:
+        radial-gradient(201.25px at 50% 270px, #000 99%, #0000 101%) calc(50% - 180px) 0/360px 51% repeat-x,
+        radial-gradient(201.25px at 50% -180px, #0000 99%, #000 101%) 50% 90px/360px calc(51% - 90px) repeat-x,
+        radial-gradient(201.25px at 50% calc(100% - 270px), #000 99%, #0000 101%) calc(50% - 180px) 100%/360px 51% repeat-x,
+        radial-gradient(201.25px at 50% calc(100% + 180px), #0000 99%, #000 101%) 50% calc(100% - 90px)/360px calc(51% - 90px) repeat-x;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+}
+
+
+.content-wrapper {
+    background-color: #F8F9FA;
+    /* Light background for better readability */
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.display-5 {
+    color: #333333;
+    /* Darker color for the headline */
+}
+
+.lead {
+    font-size: 1.25rem;
+    color: #6c757d;
+    /* Muted punchline text */
+}
+
+.btn-primary {
+    background-color: #0056b3;
+    /* Button color */
+    border: none;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+/* What we do close*/
+
+
+/* Volunteer and Partner */
+.card-body h5 i {
+    color: #FFA500;
+}
+
+/* .container{
+    background-color: #f8f9fa;
+} */
+.card {
+    transition: transform 0.3s;
+    min-height: 320px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    /* Elevate the card on hover */
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 1rem;
+}
+
+.my-btn {
+    background-color: #FFA500;
+    color: #fff;
+}
+
+/* M-V */
+
+.step-card {
+    background-color: #d6e1c8;
+    border-radius: 10px;
+    color: #333;
+    min-height: 225px;
+    /* Minimum height to make them equal */
+}
+
+.step-card .card-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    /* color: #008080; */
+    margin-bottom: 10px;
+}
+
+.step-card .card-text {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #fff;
+}
+
+.step-card em {
+    font-style: italic;
+    color: #3a3a3a;
+}
+
+.M-V {
+    padding-top: 10em;
+    padding-bottom: 10em;
+}
+
+.my-hr {
+    border: 2px solid #008080;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+/* Card styles */
+.vision-card,
+.mission-card {
+    color: white;
+    border-radius: 15px;
+    padding: 30px;
+    /* width: 300px; */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Vision Card */
+.vision-card {
+    background-color: #FFA500;
+    /* Bright green */
+}
+
+.vision-card h2 {
+    color: #008080;
+}
+
+/* Mission Card */
+.mission-card {
+    background-color: #008080;
+    /* Bright blue */
+}
+
+.mission-card h2 {
+    color: #FFA500;
+}
+
+/* Text and styling */
+.card-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Underline */
+.underline {
+    width: 50px;
+    height: 2px;
+    background-color: white !important;
+    margin: 0 auto 15px;
+    /* display: none; */
+}
+
+.underline::before,
+.underline::after {
+    content: none;
+    /* Remove any additional styling */
+}
+
+.card-text {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* M-V close */
+
+
+
+
+
+/* Skill Training */
+
+.program-card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.program-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Image styling */
+.program-image {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+}
+
+/* Text container */
+.program-content {
+    padding: 20px;
+    background-color: #F5F5F5;
+}
+
+/* Icon styling */
+.program-icon {
+    font-size: 2.5rem;
+    color: #FFA500;
+    margin-bottom: 10px;
+}
+
+/* Button styling */
+.program-btn {
+    background-color: #008080;
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+.program-btn:hover {
+    background-color: #006d6d;
+}
+
+/*  Skill Trainining Close */
+
+/* Stories of Change */
+.image-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #ced4da;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    max-width: max-content;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* .btn-stories {
+    margin-right: 10px;
+} */
+
+.image-placeholder .img-fluid {
+    border-radius: 8px;
+}
+
+h2 p {
+    text-align: justify;
+    line-height: 1.6;
+    hyphens: auto;
+    margin-bottom: 20px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: bold;
+}
+
+p {
+    font-size: 1rem;
+}
+
+.str-underline {
+    width: 100px;
+    height: 5px;
+    background-color: #FFA500 !important;
+    margin: 0 auto 15px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    /* display: none; */
+}
+
+#blend-darken {
+    mix-blend-mode: darken;
+}
+
+/* Stories of Change Close */
+
+
+/* Testi */
+
+.carousel-item {
+    transition: transform 1.5s ease-in-out;
+    /* Adjust the duration as needed */
+}
+
+.testimonials section {
+    background-image: url(/img/bg-testi.jpg);
+    background-size: cover;
+    height: 420px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #FFA500;
+    border-radius: 5px;
+    width: 70px;
+    height: 70px;
+}
+
+/* For small devices like mobile phones */
+@media (max-width: 576px) {
+    .M-V section {
+        height: 100px;
+        /* Increase the height of the carousel on mobile */
+        padding-bottom: 20px;
+        /* Add some padding at the bottom to avoid overlap with footer */
+    }
+
+    /* Adjust the carousel control buttons size and position */
+    .carousel-control-prev,
+    .carousel-control-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 10%;
+        /* Make buttons slightly larger on mobile for easier access */
+    }
+
+    .carousel-control-prev {
+        left: 5px;
+    }
+
+    .carousel-control-next {
+        right: 5px;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        background-color: rgba(0, 0, 0, 0.5);
+        /* Make button icons more visible */
+    }
+}
+
+@media (max-width: 991px) {
+    .testimonials section {
+        height: 600px;
+        /* Increase the height for tablets/mini-pads */
+        padding-bottom: 30px;
+        /* Ensure enough space to avoid overlay */
+        background-size: cover;
+    }
+
+    .testi-image {
+        width: 25%;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 14%;
+        /* Adjust button size for mini pads */
+    }
+
+    .carousel-control-prev {
+        left: 40px;
+    }
+
+    .carousel-control-next {
+        right: 40px;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        background-color: #008080;
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* For mini pads and small devices */
+@media (max-width: 768px) {
+    .testimonials section {
+        height: 500px;
+        /* Increase the height for tablets/mini-pads */
+        padding-bottom: 30px;
+        /* Ensure enough space to avoid overlay */
+        background-size: cover;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 20%;
+        /* Adjust button size for mini pads */
+    }
+
+    .carousel-control-prev {
+        left: 10px;
+    }
+
+    .carousel-control-next {
+        right: 10px;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        background-color: #008080;
+    }
+}
+
+/* new testi */
+
+.testimonial-card {
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonial-card .quote-icon {
+    font-size: 2rem;
+    color: #adb5bd;
+}
+
+.testimonial-card .testimonial-text {
+    margin: 20px 0;
+    color: #495057;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.testimonial-card .author-info {
+    position: absolute;
+    bottom: 0;
+    left: 15px;
+}
+
+.author-name {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.author-role {
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+.star-rating {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 2px;
+}
+
+.star-rating i {
+    color: #FFD700;
+    margin-left: 2px;
+}
+
+.star-rating i.far {
+    color: #dcdcdc;
+}
+
+/* Default font sizes for larger screens */
+.responsive-heading {
+    font-size: 1.8em;
+}
+
+.responsive-text {
+    font-size: 1.2em;
+}
+
+@media (max-width: 576px) {
+    .M-V section {
+        height: 610px;
+        /* Increase the height of the carousel on mobile */
+        padding-bottom: 20px;
+        /* Add some padding at the bottom to avoid overlap with footer */
+    }
+
+    .responsive-heading {
+        font-size: .5em;
+    }
+
+    .responsive-text {
+        font-size: 0.7rem;
+    }
+
+    .star-rating i {
+        font-size: 0.8em;
+    }
+}
+
+.star-rating i {
+    color: #FFA500;
+    font-size: 1em;
+}
+
+@media (max-width: 768px) {
+
+    /* .M-V section {
+        height: 790px;
+        /* Increase the height for tablets/mini-pads */
+    /* padding-bottom: 30px; */
+    /* Ensure enough space to avoid overlay */
+    /* background-size: cover; */
+    .card-body .quote-icon {
+        font-size: 1.5em;
+    }
+
+    .responsive-heading {
+        font-size: 1.3em;
+    }
+
+    .responsive-text {
+        font-size: 1rem;
+    }
+
+    .star-rating i {
+        font-size: 0.9em;
+    }
+
+    .quote-icon {
+        font-size: 1.5em;
+    }
+
+    .quote-icon h3 {
+        font-size: .2rem;
+    }
+
+    .text-muted {
+        font-size: 0.9em;
+    }
+
+    .fw-bold.lead {
+        font-size: 1rem;
+    }
+
+    .star-rating i {
+        font-size: 0.9rem;
+    }
+}
+
+/* @media (max-width: 768px) */
+
+@media (max-width: 920px) {
+    .d-flex.justify-content-between {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .star-rating {
+        margin-top: 10px !important;
+    }
+}
+
+/* Testi Close */
+
+/* Briefcase */
+.teal {
+    color: #008080;
+}
+
+/* BC Close */
+
+/* Our Partners */
+
+.square-holder {
+    width: 100%;
+    /* Automatically adjusts width */
+    max-width: 300px;
+    /* Keeps the size consistent across screens */
+    padding: 20px;
+    border: 1px solid #cecece;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    background-color: #f1f1f1;
+    min-height: 150px;
+    /* Responsive adjustments */
+    transition: transform 0.3s ease;
+}
+
+.square-holder img {
+    max-width: 100%;
+    height: auto;
+    filter: grayscale(100%);
+    transition: all 0.3s ease;
+}
+
+.square-holder:hover {
+    transform: scale(1.05);
+    /* Subtle hover effect */
+}
+
+.square-holder:hover img {
+    filter: none;
+    /* Remove grayscale on hover */
+}
+
+/* Responsive Design */
+
+
+@media (max-width: 768px) {
+
+    /* Mobile devices */
+    .our-partner {
+        height: 900px;
+    }
+
+    .our-partner h2 {
+        text-align: center;
+    }
+
+    .square-holder {
+        min-height: 100px;
+        /* Further reduce height */
+    }
+}
+
+@media (min-width: 768px) {
+
+    /* Tablets */
+    .our-partner {
+        height: 550px;
+    }
+
+    .square-holder {
+        min-height: 120px;
+        /* Reduce height for smaller screens */
+        margin-bottom: 15px;
+    }
+}
+
+/* Our Partners Close */
+
+
+/* Footer CSS */
+
+.footer {
+    background-color: #333;
+    color: #f5f5f5;
+    padding: 30px 0;
+}
+
+.footer h5 {
+    color: #ffc107;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.footer a {
+    color: #f5f5f5;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #ffc107;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: #f5f5f5;
+    font-size: 18px;
+}
+
+.social-icons a:hover {
+    color: #ffc107;
+}
+
+.contact-form input {
+    border-radius: 0;
+    border: 1px solid #ccc;
+}
+
+.btn-subscribe {
+    background-color: #ffc107;
+    border: none;
+    color: #333;
+}
+
+.btn-subscribe:hover {
+    background-color: #e6ac00;
+}
+
+.footer-bottom {
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    color: #aaa;
+}
+
+.footer {
+    background-color: #333;
+    color: #f5f5f5;
+    padding: 30px 0;
+}
+
+.footer h5 {
+    color: #ffc107;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.footer a {
+    color: #f5f5f5;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #ffc107;
+}
+
+.footer-bottom {
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    color: #aaa;
+}
+
+/* Center content on mobile */
+@media (max-width: 767.98px) {
+    .footer .text-md-left {
+        text-align: center;
+    }
+}
+
+/* Footer Close */

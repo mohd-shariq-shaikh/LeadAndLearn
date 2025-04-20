@@ -1,0 +1,509 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif;
+}
+
+p {
+    font-weight: 600;
+}
+
+.nav-container {
+    margin-bottom: 0;
+}
+
+nav div div {
+    background-color: #F5F5F5;
+}
+
+.navbar {
+    padding: 4px;
+    position: relative;
+    z-index: 10;
+}
+
+.logo-container {
+    width: 30%;
+}
+
+.logo {
+    padding: 0;
+    margin: 0;
+    width: 8vw;
+    height: auto;
+    mix-blend-mode: darken;
+    /* Maintain aspect ratio */
+}
+
+
+
+.logo-text {
+    color: #bf2025;
+    /* letter-spacing: ; */
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
+    font-size: .6rem;
+    margin-left: .3em;
+    margin-bottom: 0;
+    letter-spacing: .089em;
+    /* -webkit-text-stroke: 0.5px #bf2025; */
+}
+
+.logo {
+    width: 60px;
+    /* Default size 
+    height: auto;*/
+}
+
+a:hover {
+    color: #ffffff;
+}
+
+.nav-link-color:hover {
+    color: #ffffff;
+}
+
+.nav-link-color {
+    color: #fff;
+    background-color: #008080;
+}
+
+.custom-btn {
+    background-color: #FFA500;
+    color: #fff;
+    padding: 7.5px 12px;
+}
+
+.custom-btn:hover {
+    background-color: #ff8c00;
+    color: #ECF0F1;
+}
+
+
+.navbar-collapse {
+    justify-content: flex-end;
+    align-content: flex-end;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.nav-link {
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.skill-active {
+    color: #ffffff !important;
+    text-decoration: underline;
+    /* Underline for the active link */
+    text-underline-offset: 6px;
+    /* Adjust offset for better visibility */
+    font-weight: bold;
+    /* Optional: Make it bold for emphasis */
+}
+
+.dropdown-item:active {
+    background-color: #FFA500 !important;
+}
+
+/* Social Media Icons CSS */
+#icon_wrapper {
+    position: fixed;
+    top: 242px;
+    right: 0px;
+    z-index: 99999;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+section {
+    height: 90vh;
+    position: relative;
+}
+
+.quote {
+
+    max-width: 700px;
+    width: 80%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0; */
+    margin: auto;
+}
+
+.quote h1 {
+    color: white;
+}
+
+.quote p {
+    color: white;
+    opacity: 0.9;
+}
+
+.quote p span button {
+    opacity: 0.9;
+}
+
+
+.vision {
+    display: grid;
+    grid-template-columns: 2;
+    grid-template-rows: 1;
+}
+
+
+/* Hero Start */
+
+body {
+    background-color: #f9f2e4;
+    /* Soft beige background */
+    color: #333;
+    /* Main text color */
+}
+
+.section-title {
+    color: #2C3E50;
+    /* LeadAndLearn primary color */
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.card-container {
+    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+.card-img-left {
+    border-radius: 12px;
+    /* Rounded corners for images only */
+    object-fit: cover;
+    height: 100%;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #2C3E50;
+    /* LeadAndLearn primary color */
+}
+
+.card-text {
+    color: #555;
+    /* Secondary text color */
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.read-more {
+    color: #007bff;
+    /* Link color */
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+/* Additional styling for consistent margins and rounded image corners */
+.card {
+    margin: 20px;
+}
+
+.modal .img-fluid {
+    border-radius: 8px;
+    /* Match rounded corners for images */
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.modal-body .text-muted {
+    line-height: 1.6;
+}
+
+/* Teal btn */
+.cta-button1 {
+    display: inline-block;
+    padding: 7.5px 15px;
+    font-size: 1em;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button1 {
+    background-color: #008080;
+}
+
+.cta-button1:hover {
+    background-color: #006565;
+    color: #ECF0F1;
+}
+
+.cta-button1 {
+    padding: 4px 8px;
+    font-size: 0.8em;
+}
+
+.card-container img {
+    width: 100%;
+}
+
+.read-more:hover {
+    color: blue;
+    text-decoration: none;
+}
+
+@media (max-width: 991px) {
+    .nav-link-color {
+        color: #000000A6;
+        background-color: transparent;
+    }
+
+    .nav-link-color:hover {
+        color: rgba(0, 0, 0, 0.8);
+    }
+
+    .skill-active {
+        color: #000000A6 !important;
+        text-decoration: underline;
+        /* Underline for the active link */
+        text-underline-offset: 6px;
+        /* Adjust offset for better visibility */
+        font-weight: bold;
+        /* Optional: Make it bold for emphasis */
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+    /* .nav-link:active{
+    font-weight: normal;
+} */
+}
+
+@media (max-width: 768px) {
+    .logo {
+        width: 60px;
+        /* Smaller screens */
+    }
+}
+
+@media (max-width: 594px) {
+    .logo {
+        width: 60px;
+        /* Smaller screens */
+    }
+
+    .logo-container {
+        width: 63%;
+    }
+}
+
+@media (min-width: 200px) and (max-width: 584px) {
+    .logo {
+        width: 60px;
+
+        /* Even smaller screens */
+        .logo-container {
+            width: 51%;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+        /* text-align: center; */
+    }
+
+    .card-img-left {
+        width: 100%;
+        height: 200px;
+        /* Limit the image height on mobile */
+    }
+
+    .col-md-8 .card-content{
+        padding-left: 0;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+        /* Slightly smaller title on mobile */
+    }
+
+    .card-title {
+        font-size: 1.125rem;
+    }
+
+    .card-text {
+        font-size: 0.875rem;
+        /* Smaller text on mobile */
+    }
+
+    .read-more {
+        font-size: 0.875rem;
+        /* Adjust size of "Read More" link */
+    }
+}
+
+@media (max-width: 768px) {
+    .courses {
+        flex-direction: column;
+        /* Stack the elements vertically */
+        /* Center align the buttons */
+    }
+
+    .cta-button1 {
+        /* width: 45%; */
+        /* Each button takes up about half the width on small screens */
+        margin-bottom: 10px;
+        /* Adds space between the buttons */
+    }
+
+    .courses a {
+        width: 100%;
+        /* Ensure each anchor element takes the full width */
+    }
+
+    .courses strong {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-size: 1.2em;
+        /* Space between the heading and the first button */
+    }
+}
+
+/* Optional: For extra large mobile screens (like tablets) */
+@media (max-width: 1024px) {
+    .cta-button1 {
+        width: 45%;
+        /* Ensure buttons are still in 2-column layout on slightly larger screens */
+    }
+}
+
+/* Hero Close */
+
+/* Footer CSS */
+
+.footer {
+    background-color: #333;
+    color: #f5f5f5;
+    padding: 30px 0;
+}
+
+.footer h5 {
+    color: #ffc107;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.footer a {
+    color: #f5f5f5;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #ffc107;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: #f5f5f5;
+    font-size: 18px;
+}
+
+.social-icons a:hover {
+    color: #ffc107;
+}
+
+.contact-form input {
+    border-radius: 0;
+    border: 1px solid #ccc;
+}
+
+.btn-subscribe {
+    background-color: #ffc107;
+    border: none;
+    color: #333;
+}
+
+.btn-subscribe:hover {
+    background-color: #e6ac00;
+}
+
+.footer-bottom {
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    color: #aaa;
+}
+
+.footer {
+    background-color: #333;
+    color: #f5f5f5;
+    padding: 30px 0;
+}
+
+.footer h5 {
+    color: #ffc107;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.footer a {
+    color: #f5f5f5;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #ffc107;
+}
+
+.footer-bottom {
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    color: #aaa;
+}
+
+/* Center content on mobile */
+@media (max-width: 767.98px) {
+    .footer .text-md-left {
+        text-align: center;
+    }
+}
+
+/* Footer Close */
